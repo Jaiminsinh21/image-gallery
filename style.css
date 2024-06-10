@@ -1,0 +1,188 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+button{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 2rem;
+    width:4.5rem;
+    border-radius: .5rem;
+    border: 1px solid white;
+}
+button:hover{
+    background-color: antiquewhite;
+}
+.container {
+    max-width: 70vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+  margin-right: 250px;
+
+}
+
+.header_container {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    margin-left: 60px;
+}
+
+
+
+main {
+  
+    display: grid;
+  margin: 0px auto;
+  
+    gap: 10px;
+    justify-content: center;
+
+    /* second trick 
+    grid-template-columns: repeat(auto-fit,minmax(260px,300px));*/
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width:620px){
+    main{
+    grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+@media (min-width:880px){
+    main{
+    grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+@media (min-width:1300px){
+    main{
+    grid-template-columns: repeat(4, 1fr);
+
+    }
+}
+
+.card_container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0PX 10PX;
+    border: 1px solid rgb(196, 189, 189);
+    box-shadow: 0px 0px 15px 1px;
+    border-radius: 8px;
+    gap: 10px;
+    width: 250px;
+
+}
+
+.card_img_container {
+    position: relative;
+    overflow: hidden;
+    height: 15rem;
+
+}
+
+.card_img {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+}
+
+.card_container:hover .card_img {
+    transform: scale(1.1);
+    transition: 200ms;
+}
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    text-align: center;
+
+}
+
+.card_heading h2 {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: rgb(25, 23, 23);
+}
+
+.card_heading:hover h2 {
+    color: rgb(67, 67, 191);
+}
+
+.card_dec {
+    text-align:center;
+    max-width: 250px;
+    margin: 0 auto;
+    font-size: .89rem;
+    color: rgb(99, 91, 91);
+}
+
+.card_footer{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1.2rem ;
+
+}
+
+.person_abot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.card_author{
+    display: flex;
+    gap: 8px;
+    margin-left: 8px;
+}
+.avtar1{
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid rgb(150,147,147);
+    border-radius: 50%;
+    background-color: rgb(243, 239, 239);
+}
+.card_img{
+    height: 300px;
+    width: 350px;
+}
+
+.name{
+    color: rgb(38, 38, 149);
+}
+.date{
+    color: rgb(99, 91, 91); 
+}
+.card_tag{
+    border: 1px solid rgb(76,71, 71);
+    text-align: center;
+    border-radius: 4px;
+    line-height: 1.3rem;
+    padding: 0.20rem .5rem;
+    color: gray;
+    height: 30px;
+    margin-top: 8px;
+    margin-right: 8px;
+    
+}
+.card_tag span{
+    font-size: 13px;
+
+}
+
+a {
+    text-decoration: none;
+}
